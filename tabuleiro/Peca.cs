@@ -14,5 +14,10 @@
             Cor = cor;
             NumMovimentos = 0;
         }
+
+        public void IncrementarQtdMovimentos()
+        {
+            NumMovimentos++;
+        }
     }
 }

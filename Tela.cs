@@ -1,4 +1,6 @@
-﻿using tabuleiro;
+﻿using System.Data.SqlTypes;
+using tabuleiro;
+using xadrezclass;
 
 namespace Xadrez
 {
@@ -26,6 +28,13 @@ namespace Xadrez
             Console.WriteLine("  A B C D E F G H");
         }
 
+        public static PosicaoXadrez LerPosicaoXadrez()
+        {
+            string resp = Console.ReadLine();
+            char coluna = resp[0];
+            int linha = int.Parse(resp[1] + "");
+            return new PosicaoXadrez(coluna, linha);
+        }
         public static void ImprimirPeca(Peca peca)
         {
             if(peca.Cor == Cor.Branco)
