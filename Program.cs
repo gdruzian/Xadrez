@@ -15,6 +15,8 @@ namespace Xadrez
             Tela.ImprimirTabuleiro(tabuleiro);
 
             Console.WriteLine();
+
+            Console.WriteLine();
         }
     }
 }
