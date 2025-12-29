@@ -9,8 +9,8 @@ namespace Xadrez
         {
             Tabuleiro tabuleiro = new Tabuleiro(8, 8);
 
-            tabuleiro.InserirPeca(new Torre(tabuleiro, Cor.Preto), new Posicao(0, 0));
-            tabuleiro.InserirPeca(new Rei(tabuleiro, Cor.Preto), new Posicao(2, 3));
+            tabuleiro.InserirPeca(new Torre(tabuleiro, Cor.Preto), new Posicao(0,0));
+            tabuleiro.InserirPeca(new Rei(tabuleiro, Cor.Preto), new Posicao(2,0));
 
             Tela.ImprimirTabuleiro(tabuleiro);
 
