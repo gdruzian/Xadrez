@@ -1,4 +1,5 @@
 ﻿using tabuleiro;
+using xadrezclass;
 
 namespace Xadrez
 {
@@ -7,6 +8,9 @@ namespace Xadrez
         static void Main(string[] args)
         {
             Tabuleiro tabuleiro = new Tabuleiro(8, 8);
+
+            tabuleiro.InserirPeca(new Torre(tabuleiro, Cor.Preto), new Posicao(0, 0));
+            tabuleiro.InserirPeca(new Rei(tabuleiro, Cor.Preto), new Posicao(2, 3));
 
             Tela.ImprimirTabuleiro(tabuleiro);
 
