@@ -12,7 +12,7 @@ O sistema é capaz de identificar jogadas válidas, capturar peças, reconhecer 
 ## 📸 Demonstração
 
 <div align="center">
-  <img src="URL_DA_TUA_IMAGEM_AQUI" alt="Demonstração do Tabuleiro" width="600">
+  <img src="https://github.com/user-attachments/assets/9a3f553b-8518-4100-bc32-7e7c2adb3f9f" alt="Demonstração do Tabuleiro" width="600">
 </div>
 
 ## ✨ Funcionalidades
