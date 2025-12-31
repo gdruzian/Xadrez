@@ -91,7 +91,7 @@ namespace Xadrez
                 Console.WriteLine();
             }
             Console.BackgroundColor = FundoOriginal;
-            Console.WriteLine("  A B C D E F G H");
+            Console.WriteLine("  a b c d e f g h");
         }
 
         public static PosicaoXadrez LerPosicaoXadrez()
@@ -120,9 +120,9 @@ namespace Xadrez
                     Console.Write(peca);
                     Console.ForegroundColor = aux;
                 }
-                Console.Write(" ");
-            }
                 
+            }
+            Console.Write(" ");
         }
 
     }
