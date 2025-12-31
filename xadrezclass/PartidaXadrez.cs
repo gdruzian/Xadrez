@@ -1,4 +1,5 @@
-﻿using tabuleiro;
+﻿using System.Data.Common;
+using tabuleiro;
 
 namespace xadrezclass
 {
@@ -202,6 +203,27 @@ namespace xadrezclass
             {
                 Capturadas.Add(PecaCapturada);
             }
+
+            //Roque Pequeno
+            if(p is Rei && final.Coluna == origem.Coluna + 2)
+            {
+                Posicao origemT = new Posicao(origem.Linha, origem.Coluna + 3);
+                Posicao destinoT = new Posicao(origem.Linha, origem.Coluna + 1);
+                Peca T = Tab.RetirarPeca(origemT);
+                T.IncrementarQtdMovimentos();
+                Tab.InserirPeca(T, destinoT);
+            }
+
+            //Roque Grande
+            if (p is Rei && final.Coluna == origem.Coluna - 2)
+            {
+                Posicao origemT = new Posicao(origem.Linha, origem.Coluna - 4);
+                Posicao destinoT = new Posicao(origem.Linha, origem.Coluna - 1);
+                Peca T = Tab.RetirarPeca(origemT);
+                T.IncrementarQtdMovimentos();
+                Tab.InserirPeca(T, destinoT);
+            }
+
             return PecaCapturada;
         }
 
@@ -215,6 +237,26 @@ namespace xadrezclass
                 Capturadas.Remove(Capturada);
             }
             Tab.InserirPeca(p, origem);
+
+            //Roque Pequeno
+            if (p is Rei && destino.Coluna == origem.Coluna + 2)
+            {
+                Posicao origemT = new Posicao(origem.Linha, origem.Coluna + 3);
+                Posicao destinoT = new Posicao(origem.Linha, origem.Coluna + 1);
+                Peca T = Tab.RetirarPeca(destinoT);
+                T.DecrementarQtdMovimentos();
+                Tab.InserirPeca(T, origemT);
+            }
+
+            //Roque Grande
+            if (p is Rei && destino.Coluna == origem.Coluna - 2)
+            {
+                Posicao origemT = new Posicao(origem.Linha, origem.Coluna - 4);
+                Posicao destinoT = new Posicao(origem.Linha, origem.Coluna - 1);
+                Peca T = Tab.RetirarPeca(destinoT);
+                T.DecrementarQtdMovimentos();
+                Tab.InserirPeca(T, origemT);
+            }
         }
 
         public void ColocarNovaPeca(char coluna, int linha, Peca peca)
