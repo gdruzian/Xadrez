@@ -49,7 +49,7 @@ Certifique-se de ter o [.NET SDK](https://dotnet.microsoft.com/download) instala
 
 ```bash
 # Clone este repositório
-$ git clone [https://github.com/gdruzian/Xadrez.git](https://github.com/gdruzian/Xadrez.git)
+$ git clone https://github.com/gdruzian/Xadrez.git
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd Xadrez
